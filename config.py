@@ -3,5 +3,6 @@ FLASK_SECRET_KEY = "aT}C2./}5rY*>h2f?=*F)j6}n=/Bf?V#[FR56BgN[CrQ8<.N!,dGZJw?JuBS
 
 CHROMEDRIVER = "/home/george/Desktop/cy_petrolAPI/chromedriver"
 
-MONGO_DB = ""
-PETROL_COLLECTION = ""
+MONGO_CONNECTION = "mongodb://localhost:27017/"
+MONGO_DB = "my_information3"
+PETROL_COLLECTION = "all_petrol"

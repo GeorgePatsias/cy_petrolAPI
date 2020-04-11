@@ -1,17 +1,18 @@
 from config import API_KEY
+from functools import wraps
 from classes.Logger import Logger
+from flask import request, make_response
 logger = Logger().getLogger()
 
 
-class Auth():
-    def isValid(self, api_key=None):
-        try:
-            if not api_key or api_key != API_KEY:
-                logger.error('Unauthorized API Key')
-                return False
+def api_authentication(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        auth_key = request.headers.get('Authorization', None)
 
-            return True
+        if not auth_key or auth_key != API_KEY:
+            logger.info('Invalid API key: {}'.format(auth_key))
+            return make_response({"Status": "Unauthorized"}, 401)
 
-        except Exception as e:
-            logger.exception(e)
-            return False
+        return f(*args, **kwargs)
+    return decorated_function
