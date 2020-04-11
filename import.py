@@ -20,7 +20,7 @@ webDriver = WebDriverObj()
 cities_map = {}
 petrol_map = {}
 
-date_time_now = datetime.datetime.now()
+date_time_now = str(datetime.datetime.now())
 
 
 def dms2latlon(dms_str):
