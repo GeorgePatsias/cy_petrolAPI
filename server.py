@@ -23,8 +23,8 @@ def all_information():
     try:
         return operation.get_all_information(), 200
 
-    except Exception as e:
-        logger.exception(e)
+    except Exception:
+        logger.exception()
         return jsonify({'Status': 'Something went wrong'}), 500
 
 
@@ -34,8 +34,8 @@ def filter_distinct(filter=None):
     try:
         return operation.get_filter_distinct(filter), 200
 
-    except Exception as e:
-        logger.exception(e)
+    except Exception:
+        logger.exception()
         return jsonify({'Status': 'Something went wrong'}), 500
 
 
@@ -45,8 +45,8 @@ def latest_information():
     try:
         return operation.get_latest(), 200
 
-    except Exception as e:
-        logger.exception(e)
+    except Exception:
+        logger.exception()
         return jsonify({'Status': 'Something went wrong'}), 500
 
 
