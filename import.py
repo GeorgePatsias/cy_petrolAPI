@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 mongo_client = MongoClient('mongodb://localhost:27017/', connect=False)
-db = mongo_client['my_information3']
+db = mongo_client['my_information4']
 petrol_collec = db['all_petrol']
 
 webDriver = WebDriverObj()

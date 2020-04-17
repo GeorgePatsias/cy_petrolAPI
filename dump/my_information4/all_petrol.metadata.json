@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"my_information4.all_petrol"}],"uuid":"d85799a0dc064b07afe498e42bc1bc1d"}
