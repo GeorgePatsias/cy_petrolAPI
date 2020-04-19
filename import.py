@@ -187,7 +187,7 @@ def main():
 
 
 if __name__ == "__main__":
-    logging.basicConfig(filename='app.log', level=logging.INFO)
+    logging.basicConfig(filename='/var/log/uwsgi/server.log', level=logging.INFO)
 
     main()
 

@@ -6,7 +6,7 @@ class Logger():
         self.logger = logging.getLogger("main")
         self.logger.setLevel(logging.DEBUG)
 
-        self._handler = logging.FileHandler('app.log')
+        self._handler = logging.FileHandler('/var/log/uwsgi/server.log')
         self._handler.setLevel(logging.DEBUG)
 
         self._formatter = logging.Formatter('[%(name)s] - %(levelname)s - %(asctime)s  - %(message)s')

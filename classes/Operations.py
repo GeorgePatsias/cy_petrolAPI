@@ -1,6 +1,7 @@
 
+import os
 import json
-import datetime
+from datetime import datetime
 from flask import escape
 from classes.Logger import Logger
 from classes.MongoManager import MongoManager
@@ -46,3 +47,9 @@ class Operations():
         except Exception:
             logger.exception()
             return
+
+    def update(self):
+        try:
+            os.system('. venv/bin/activate && python3 import.py')
+        except Exception:
+            logger.exception()
